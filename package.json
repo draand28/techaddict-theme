@@ -1,0 +1,1 @@
+{"name":"techaddict-theme","version":"1.0.0","private":true,"type":"module","scripts":{"shots":"node tools/shots.mjs"},"dependencies":{"puppeteer-core":"^25.18.1"}}

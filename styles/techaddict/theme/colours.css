@@ -1,0 +1,1140 @@
+/*  Carbon - dark theme for phpBB 3.3
+    Palette and colour rules. Layout lives in techaddict.css.
+    Based on prosilver (c) phpBB Limited, GPL-2.0.
+*/
+
+:root {
+	--ta-bg: #0a0e13;
+	--ta-bg-2: #0e131a;
+	--ta-surface: #111821;
+	--ta-surface-2: #151d27;
+	--ta-surface-3: #1a2431;
+	--ta-border: #24313f;
+	--ta-border-soft: #1a2431;
+	--ta-text: #dfe7f0;
+	--ta-text-dim: #93a3b8;
+	--ta-text-faint: #6a7b90;
+	--ta-accent: #22d3ee;
+	--ta-accent-2: #8b7cff;
+	--ta-accent-ink: #04141a;
+	--ta-accent-soft: rgba(34, 211, 238, 0.10);
+	--ta-danger: #f87171;
+	--ta-ok: #34d399;
+	--ta-warn: #fbbf24;
+}
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for common.css
+-------------------------------------------------------------- */
+
+html, body {
+	color: var(--ta-text);
+	background-color: var(--ta-bg);
+}
+
+h1 {
+	color: #ffffff;
+}
+
+h2 {
+	color: var(--ta-text);
+}
+
+h3 {
+	border-bottom-color: var(--ta-border);
+	color: var(--ta-text);
+}
+
+hr {
+	border-color: transparent;
+	border-top-color: var(--ta-border);
+}
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for links.css
+-------------------------------------------------------------- */
+
+a { color: var(--ta-accent); }
+a:hover { color: #8ce9f7; }
+
+/* Links on gradient backgrounds */
+.forumbg .header a, .forabg .header a, th a {
+	color: var(--ta-text-dim);
+}
+
+.forumbg .header a:hover, .forabg .header a:hover, th a:hover {
+	color: var(--ta-accent);
+}
+
+/* Notification mark read link */
+.dropdown-extended a.mark_read {
+	background-color: var(--ta-surface-2);
+}
+
+/* Post body links */
+.postlink {
+	border-bottom-color: var(--ta-accent);
+	color: var(--ta-accent);
+}
+
+.postlink:visited {
+	border-bottom-color: #6d8aa8;
+	color: #9dbfe0;
+}
+
+.postlink:hover {
+	background-color: var(--ta-accent-soft);
+	color: #a8f1fb;
+}
+
+.signature a, .signature a:hover {
+	background-color: transparent;
+}
+
+/* Back to top of page */
+.top i {
+	color: var(--ta-text-faint);
+}
+
+/* Arrow links  */
+.arrow-left:hover, .arrow-right:hover {
+	color: var(--ta-accent);
+}
+
+/* Round cornered boxes and backgrounds
+---------------------------------------- */
+.wrap {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.headerbar {
+	color: var(--ta-text);
+}
+
+.headerbar, .forumbg {
+	background-color: transparent;
+	background-image: none;
+}
+
+.forabg {
+	background-color: var(--ta-surface);
+	background-image: none;
+}
+
+.navbar {
+	background-color: rgba(14, 19, 26, 0.86);
+}
+
+.panel {
+	background-color: var(--ta-surface);
+	color: var(--ta-text);
+}
+
+.post:target .content {
+	color: var(--ta-text);
+}
+
+.post h3 a.first-unread,
+.post:target h3 a {
+	color: var(--ta-text);
+}
+
+.bg1 {
+	background-color: var(--ta-surface);
+}
+
+table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
+	background-color: var(--ta-surface);
+}
+
+.bg2 {
+	background-color: var(--ta-surface-2);
+}
+
+table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
+	background-color: var(--ta-surface-2);
+}
+
+.bg3 {
+	background-color: var(--ta-surface-3);
+}
+
+.ucprowbg {
+	background-color: var(--ta-surface-2);
+}
+
+.fieldsbg {
+	background-color: var(--ta-surface-2);
+}
+
+.site_logo {
+	background-image: none;
+}
+
+/* Horizontal lists
+----------------------------------------*/
+
+ul.navlinks {
+	border-top-color: var(--ta-border);
+}
+
+/* Table styles
+----------------------------------------*/
+table.table1 thead th {
+	color: var(--ta-text-faint);
+}
+
+table.table1 tbody tr {
+	border-color: var(--ta-border);
+}
+
+table.table1 tbody tr:hover, table.table1 tbody tr.hover {
+	background-color: var(--ta-surface-3);
+	color: var(--ta-text);
+}
+
+table.table1 td {
+	color: var(--ta-text-dim);
+}
+
+table.table1 tbody td {
+	border-top-color: var(--ta-border-soft);
+}
+
+table.table1 tbody th {
+	border-bottom-color: var(--ta-border);
+	color: var(--ta-text);
+	background-color: var(--ta-surface);
+}
+
+table.info tbody th {
+	color: var(--ta-text);
+}
+
+/* Misc layout styles
+---------------------------------------- */
+dl.details dt {
+	color: var(--ta-text);
+}
+
+dl.details dd {
+	color: var(--ta-text-dim);
+}
+
+.sep {
+	color: var(--ta-border);
+}
+
+/* Icon styles
+---------------------------------------- */
+.icon.icon-blue, a:hover .icon.icon-blue {
+	color: #60a5fa;
+}
+
+.icon.icon-green, a:hover .icon.icon-green {
+	color: var(--ta-ok);
+}
+
+.icon.icon-red, a:hover .icon.icon-red {
+	color: var(--ta-danger);
+}
+
+.icon.icon-orange, a:hover .icon.icon-orange {
+	color: var(--ta-warn);
+}
+
+.icon.icon-bluegray, a:hover .icon.icon-bluegray {
+	color: var(--ta-text-dim);
+}
+
+.icon.icon-gray, a:hover .icon.icon-gray {
+	color: var(--ta-text-faint);
+}
+
+.icon.icon-lightgray, a:hover .icon.icon-lightgray {
+	color: #4d5d70;
+}
+
+.icon.icon-black, a:hover .icon.icon-black {
+	color: var(--ta-text);
+}
+
+.alert_close .icon:before {
+	background-color: var(--ta-surface-2);
+}
+
+/* Jumpbox */
+.jumpbox .dropdown li {
+	border-top-color: var(--ta-border-soft);
+}
+
+.jumpbox-cat-link {
+	background-color: var(--ta-surface-3);
+	border-top-color: var(--ta-border);
+	color: var(--ta-text);
+}
+
+.jumpbox-cat-link:hover {
+	background-color: var(--ta-accent-soft);
+	border-top-color: var(--ta-border);
+	color: var(--ta-accent);
+}
+
+.jumpbox-forum-link {
+	background-color: var(--ta-surface-2);
+}
+
+.jumpbox-forum-link:hover {
+	background-color: var(--ta-surface-3);
+}
+
+.jumpbox .dropdown .pointer-inner {
+	border-color: var(--ta-surface-2) transparent;
+}
+
+.jumpbox-sub-link {
+	background-color: var(--ta-surface-2);
+}
+
+.jumpbox-sub-link:hover {
+	background-color: var(--ta-surface-3);
+}
+
+/* Miscellaneous styles
+---------------------------------------- */
+
+.copyright {
+	color: var(--ta-text-faint);
+}
+
+.error {
+	color: var(--ta-danger);
+}
+
+.reported {
+	background-color: rgba(248, 113, 113, 0.08);
+}
+
+li.reported:hover {
+	background-color: rgba(248, 113, 113, 0.14) !important;
+}
+.sticky, .announce {
+	/* you can add a background for stickies and announcements*/
+}
+
+div.rules {
+	background-color: rgba(248, 113, 113, 0.08);
+	color: #fca5a5;
+	border-color: rgba(248, 113, 113, 0.24);
+}
+
+p.post-notice {
+	background-color: rgba(248, 113, 113, 0.08);
+	background-image: none;
+}
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for content.css
+-------------------------------------------------------------- */
+
+ul.forums {
+	background-color: transparent;
+	background-image: none;
+}
+
+ul.topiclist li {
+	color: var(--ta-text-dim);
+}
+
+ul.topiclist dd {
+	border-left-color: transparent;
+}
+
+.rtl ul.topiclist dd {
+	border-right-color: transparent;
+	border-left-color: transparent;
+}
+
+li.row {
+	border-top-color: var(--ta-border-soft);
+	border-bottom-color: transparent;
+}
+
+li.row strong {
+	color: var(--ta-text);
+}
+
+li.row:hover {
+	background-color: var(--ta-accent-soft);
+}
+
+li.row:hover dd {
+	border-left-color: transparent;
+}
+
+.rtl li.row:hover dd {
+	border-right-color: transparent;
+	border-left-color: transparent;
+}
+
+li.header dt, li.header dd {
+	color: var(--ta-text-faint);
+}
+
+/* Post body styles
+----------------------------------------*/
+.postbody {
+	color: var(--ta-text);
+}
+
+/* Content container styles
+----------------------------------------*/
+.content {
+	color: var(--ta-text);
+}
+
+.content h2, .panel h2 {
+	color: var(--ta-text);
+	border-bottom-color: var(--ta-border);
+}
+
+dl.faq dt {
+	color: var(--ta-text);
+}
+
+.posthilit {
+	background-color: rgba(34, 211, 238, 0.18);
+	color: #a8f1fb;
+}
+
+.announce, .unreadpost {
+	/* Highlight the announcements & unread posts box */
+}
+
+/* Post signature */
+.signature {
+	border-top-color: var(--ta-border-soft);
+}
+
+/* Post noticies */
+.notice {
+	border-top-color: var(--ta-border-soft);
+}
+
+/* BB Code styles
+----------------------------------------*/
+/* Quote block */
+blockquote {
+	background-color: var(--ta-surface-2);
+	border-color: var(--ta-border);
+	color: var(--ta-text-dim);
+}
+
+blockquote blockquote {
+	/* Nested quotes */
+	background-color: var(--ta-surface-3);
+}
+
+blockquote blockquote blockquote {
+	/* Nested quotes */
+	background-color: var(--ta-surface-2);
+}
+
+/* Code block */
+.codebox {
+	background-color: #0b1016;
+	border-color: var(--ta-border);
+}
+
+.codebox p {
+	border-bottom-color: var(--ta-border);
+}
+
+.codebox code {
+	color: #7dd3c0;
+}
+
+/* Attachments
+----------------------------------------*/
+.attachbox {
+	background-color: var(--ta-surface-2);
+	border-color: var(--ta-border);
+}
+
+.pm-message .attachbox {
+	background-color: var(--ta-surface-2);
+}
+
+.attachbox dd {
+	border-top-color: var(--ta-border);
+}
+
+.attachbox p {
+	color: var(--ta-text-dim);
+}
+
+.attachbox p.stats {
+	color: var(--ta-text-faint);
+}
+
+.attach-image img {
+	border-color: var(--ta-border);
+}
+
+/* Inline image thumbnails */
+
+dl.file dd {
+	color: var(--ta-text-dim);
+}
+
+dl.thumbnail img {
+	border-color: var(--ta-border);
+	background-color: var(--ta-surface);
+}
+
+dl.thumbnail dd {
+	color: var(--ta-text-dim);
+}
+
+dl.thumbnail dt a:hover {
+	background-color: var(--ta-surface-3);
+}
+
+dl.thumbnail dt a:hover img {
+	border-color: var(--ta-accent);
+}
+
+/* Post poll styles
+----------------------------------------*/
+
+fieldset.polls dl {
+	border-top-color: var(--ta-border-soft);
+	color: var(--ta-text-dim);
+}
+
+fieldset.polls dl.voted {
+	color: var(--ta-text);
+}
+
+fieldset.polls dd div {
+	color: var(--ta-accent-ink);
+}
+
+.rtl .pollbar1, .rtl .pollbar2, .rtl .pollbar3, .rtl .pollbar4, .rtl .pollbar5 {
+	border-right-color: transparent;
+}
+
+.pollbar1 {
+	background-color: #0e7490;
+	border-bottom-color: #0a5b72;
+	border-right-color: #0a5b72;
+}
+
+.rtl .pollbar1 {
+	border-left-color: #0a5b72;
+}
+
+.pollbar2 {
+	background-color: #0891b2;
+	border-bottom-color: #0e7490;
+	border-right-color: #0e7490;
+}
+
+.rtl .pollbar2 {
+	border-left-color: #0e7490;
+}
+
+.pollbar3 {
+	background-color: #06b6d4;
+	border-bottom-color: #0891b2;
+	border-right-color: #0891b2;
+}
+
+.rtl .pollbar3 {
+	border-left-color: #0891b2;
+}
+
+.pollbar4 {
+	background-color: #22d3ee;
+	border-bottom-color: #06b6d4;
+	border-right-color: #06b6d4;
+}
+
+.rtl .pollbar4 {
+	border-left-color: #06b6d4;
+}
+
+.pollbar5 {
+	background-color: #67e8f9;
+	border-bottom-color: #22d3ee;
+	border-right-color: #22d3ee;
+}
+
+.rtl .pollbar5 {
+	border-left-color: #22d3ee;
+}
+
+/* Poster profile block
+----------------------------------------*/
+.postprofile {
+	color: var(--ta-text-dim);
+	border-color: var(--ta-border-soft);
+}
+
+.pm .postprofile {
+	border-color: var(--ta-border-soft);
+}
+
+.postprofile strong {
+	color: var(--ta-text);
+}
+
+.online {
+	background-image: none;
+}
+
+dd.profile-warnings {
+	color: var(--ta-danger);
+}
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for buttons.css
+-------------------------------------------------------------- */
+.button {
+	border-color: var(--ta-border);
+	background-color: var(--ta-surface-2);
+	background-image: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	color: var(--ta-text-dim);
+}
+
+.button:hover,
+.button:focus {
+	border-color: var(--ta-accent);
+	background-color: var(--ta-surface-3);
+	background-image: none;
+	color: var(--ta-text);
+	text-shadow: none;
+}
+
+.button .icon,
+.button-secondary {
+	color: var(--ta-text-faint);
+}
+
+.button-secondary:focus,
+.button-secondary:hover,
+.button:focus .icon,
+.button:hover .icon {
+	color: var(--ta-accent);
+}
+
+.button-search:hover,
+.button-search-end:hover {
+	border-color: var(--ta-accent);
+}
+
+.caret	{ border-color: var(--ta-text-faint); }
+.caret	{ border-color: var(--ta-text-faint); }
+
+.contact-icons a	{ border-color: var(--ta-border); }
+.contact-icons a:hover	{ background-color: var(--ta-surface-3); }
+
+/* Pagination
+---------------------------------------- */
+
+.pagination li a {
+	background: var(--ta-surface-2);
+	filter: none;
+	border-color: var(--ta-border);
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	color: var(--ta-text-dim);
+}
+
+.pagination li.ellipsis span {
+	background: transparent;
+	color: var(--ta-text-faint);
+}
+
+.pagination li.active span {
+	background: var(--ta-accent);
+	border-color: var(--ta-accent);
+	color: var(--ta-accent-ink);
+}
+
+.pagination li a:hover, .pagination li a:hover .icon, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger {
+	background: var(--ta-surface-3);
+	border-color: var(--ta-border);
+	filter: none;
+	color: var(--ta-text);
+	text-shadow: none;
+}
+
+/* Search box
+--------------------------------------------- */
+
+.search-box .inputbox,
+.search-box .inputbox:hover,
+.search-box .inputbox:focus {
+	border-color: var(--ta-border);
+}
+
+.search-header {
+	box-shadow: none;
+}
+
+.search-results li:hover,
+.search-results li.active {
+	background-color: var(--ta-surface-3);
+}
+
+/* Icon images
+---------------------------------------- */
+
+.contact-icon						{ background-image: url("./images/icons_contact.png"); }
+
+/* Profile & navigation icons */
+.pm-icon						{ background-position: 0 0; }
+.email-icon						{ background-position: -21px 0; }
+.jabber-icon						{ background-position: -80px 0; }
+.phpbb_icq-icon						{ background-position: -61px 0 ; }
+.phpbb_wlm-icon						{ background-position: -182px 0; }
+.phpbb_aol-icon						{ background-position: -244px 0; }
+.phpbb_website-icon					{ background-position: -40px 0; }
+.phpbb_youtube-icon					{ background-position: -98px 0; }
+.phpbb_facebook-icon					{ background-position: -119px 0; }
+.phpbb_skype-icon					{ background-position: -161px 0; }
+.phpbb_twitter-icon					{ background-position: -202px 0; }
+.phpbb_yahoo-icon					{ background-position: -224px 0; }
+
+/* Forum and topic icons are drawn with the icon font in techaddict.css */
+.global_read, .global_read_mine, .global_read_locked, .global_read_locked_mine,
+.global_unread, .global_unread_mine, .global_unread_locked, .global_unread_locked_mine,
+.announce_read, .announce_read_mine, .announce_read_locked, .announce_read_locked_mine,
+.announce_unread, .announce_unread_mine, .announce_unread_locked, .announce_unread_locked_mine,
+.forum_link, .forum_read, .forum_read_locked, .forum_read_subforum, .forum_unread,
+.forum_unread_locked, .forum_unread_subforum,
+.sticky_read, .sticky_read_mine, .sticky_read_locked, .sticky_read_locked_mine,
+.sticky_unread, .sticky_unread_mine, .sticky_unread_locked, .sticky_unread_locked_mine,
+.topic_moved, .pm_read, .topic_read, .topic_read_mine, .topic_read_hot, .topic_read_hot_mine,
+.topic_read_locked, .topic_read_locked_mine, .pm_unread, .topic_unread, .topic_unread_mine,
+.topic_unread_hot, .topic_unread_hot_mine, .topic_unread_locked, .topic_unread_locked_mine {
+	background-image: none;
+}
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for cp.css
+-------------------------------------------------------------- */
+
+/* Main CP box
+----------------------------------------*/
+
+.panel-container h3, .panel-container hr, .cp-menu hr {
+	border-color: var(--ta-border);
+}
+
+.panel-container .panel li.row {
+	border-bottom-color: var(--ta-border-soft);
+	border-top-color: var(--ta-border-soft);
+}
+
+ul.cplist {
+	border-top-color: var(--ta-border);
+}
+
+.panel-container .panel li.header dd, .panel-container .panel li.header dt {
+	color: var(--ta-text-faint);
+}
+
+.panel-container table.table1 thead th {
+	color: var(--ta-text-faint);
+	border-bottom-color: var(--ta-border);
+}
+
+.cp-main .pm-message {
+	border-color: var(--ta-border);
+	background-color: var(--ta-surface);
+}
+
+/* CP tabbed menu
+----------------------------------------*/
+.tabs .tab > a {
+	background: var(--ta-surface-2);
+	color: var(--ta-text-dim);
+}
+
+.tabs .tab > a:hover {
+	background: var(--ta-surface-3);
+	color: var(--ta-text);
+}
+
+.tabs .activetab > a,
+.tabs .activetab > a:hover {
+	background-color: var(--ta-surface);
+	background-image: none;
+	border-color: var(--ta-border);
+	box-shadow: none;
+	color: var(--ta-text);
+}
+
+.tabs .activetab > a:hover {
+	color: var(--ta-text);
+}
+
+/* Mini tabbed menu used in MCP
+----------------------------------------*/
+.minitabs .tab > a {
+	background-color: var(--ta-surface-2);
+}
+
+.minitabs .activetab > a,
+.minitabs .activetab > a:hover {
+	background-color: var(--ta-surface-3);
+	color: var(--ta-text);
+}
+
+/* Responsive tabs
+----------------------------------------*/
+.responsive-tab .responsive-tab-link:before {
+	border-color: var(--ta-text);
+}
+
+.responsive-tab .responsive-tab-link:hover:before {
+	border-color: var(--ta-accent);
+}
+
+/* UCP navigation menu
+----------------------------------------*/
+
+/* Link styles for the sub-section links */
+.navigation a {
+	color: var(--ta-text-dim);
+	background: var(--ta-surface-2);
+	background-image: none;
+	filter: none;
+}
+
+.rtl .navigation a {
+	background: var(--ta-surface-2);
+	background-image: none;
+	filter: none;
+}
+
+.navigation a:hover {
+	background: var(--ta-surface-3);
+	color: var(--ta-text);
+	filter: none;
+}
+
+.navigation .active-subsection a {
+	background: var(--ta-surface-3);
+	color: var(--ta-accent);
+	filter: none;
+}
+
+.navigation .active-subsection a:hover {
+	color: var(--ta-accent);
+}
+
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px)
+{
+	#navigation a, .rtl #navigation a {
+		background: var(--ta-surface-2);
+	}
+}
+
+/* Preferences pane layout
+----------------------------------------*/
+.panel-container h2 {
+	color: var(--ta-text);
+}
+
+.panel-container .panel {
+	background-color: var(--ta-surface);
+}
+
+.cp-main .pm {
+	background-color: var(--ta-surface);
+}
+
+/* Friends list */
+.cp-mini {
+	background-color: var(--ta-surface-2);
+}
+
+dl.mini dt {
+	color: var(--ta-text);
+}
+
+/* PM Styles
+----------------------------------------*/
+/* PM Message history */
+.current {
+	color: var(--ta-text) !important;
+}
+
+/* PM marking colours */
+.pmlist li.pm_message_reported_colour, .pm_message_reported_colour {
+	border-left-color: var(--ta-danger);
+	border-right-color: var(--ta-danger);
+}
+
+.pmlist li.pm_marked_colour, .pm_marked_colour {
+	border-color: var(--ta-warn);
+}
+
+.pmlist li.pm_replied_colour, .pm_replied_colour {
+	border-color: var(--ta-border);
+}
+
+.pmlist li.pm_friend_colour, .pm_friend_colour {
+	border-color: #60a5fa;
+}
+
+.pmlist li.pm_foe_colour, .pm_foe_colour {
+	border-color: var(--ta-text-faint);
+}
+
+/* Avatar gallery */
+.gallery label {
+	background: var(--ta-surface-2);
+	border-color: var(--ta-border);
+}
+
+.gallery label:hover {
+	background-color: var(--ta-surface-3);
+}
+
+/*
+--------------------------------------------------------------
+Colours and backgrounds for forms.css
+-------------------------------------------------------------- */
+
+/* General form styles
+----------------------------------------*/
+select {
+	border-color: var(--ta-border);
+	background-color: var(--ta-surface-2);
+	color: var(--ta-text);
+}
+
+label {
+	color: var(--ta-text-dim);
+}
+
+option.disabled-option {
+	color: graytext;
+}
+
+/* Definition list layout for forms
+---------------------------------------- */
+dd label {
+	color: var(--ta-text);
+}
+
+fieldset.fields1 {
+	background-color: transparent;
+}
+
+/* Hover effects */
+fieldset dl:hover dt label {
+	color: var(--ta-text);
+}
+
+fieldset.fields2 dl:hover dt label {
+	color: inherit;
+}
+
+/* Quick-login on index page */
+fieldset.quick-login input.inputbox {
+	background-color: var(--ta-surface-2);
+}
+
+/* Posting page styles
+----------------------------------------*/
+
+.message-box textarea {
+	color: var(--ta-text);
+}
+
+.message-box textarea.drag-n-drop {
+	outline-color: rgba(147, 163, 184, 0.5);
+}
+
+.message-box textarea.drag-n-drop-highlight {
+	outline-color: rgba(34, 211, 238, 0.5);
+}
+
+/* Input field styles
+---------------------------------------- */
+.inputbox {
+	background-color: var(--ta-surface-2);
+	border-color: var(--ta-border);
+	color: var(--ta-text);
+}
+
+.inputbox:-moz-placeholder {
+	color: var(--ta-text-faint);
+}
+
+.inputbox::-webkit-input-placeholder {
+	color: var(--ta-text-faint);
+}
+
+.inputbox:hover {
+	border-color: #33465a;
+}
+
+.inputbox:focus {
+	border-color: var(--ta-accent);
+}
+
+.inputbox:focus:-moz-placeholder {
+	color: transparent;
+}
+
+.inputbox:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+
+/* Form button styles
+---------------------------------------- */
+
+a.button1, input.button1, input.button3, a.button2, input.button2 {
+	color: var(--ta-text);
+	background-color: var(--ta-surface-2);
+	background-image: none;
+	filter: none;
+}
+
+a.button1, input.button1 {
+	border-color: var(--ta-border);
+}
+
+input.button3 {
+	background-image: none;
+}
+
+/* Alternative button */
+a.button2, input.button2, input.button3 {
+	border-color: var(--ta-border);
+}
+
+/* <a> button in the style of the form buttons */
+a.button1, a.button2 {
+	color: var(--ta-text);
+}
+
+/* Hover states */
+a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
+	border-color: var(--ta-border);
+	color: var(--ta-text);
+	background-color: var(--ta-surface-3);
+	background-image: none;
+	filter: none;
+}
+
+/* Focus states */
+input.button1:focus, input.button2:focus, input.button3:focus {
+	border-color: var(--ta-accent);
+	color: var(--ta-text);
+}
+
+input.disabled {
+	color: var(--ta-text-faint);
+}
+
+/* jQuery popups
+---------------------------------------- */
+.phpbb_alert {
+	background-color: var(--ta-surface-2);
+	border-color: var(--ta-border);
+}
+.darken {
+	background-color: #000000;
+}
+
+.loading_indicator {
+	background-color: #000000;
+	background-image: url("./images/loading.gif");
+}
+
+.dropdown-extended ul li {
+	border-top-color: var(--ta-border-soft);
+}
+
+.dropdown-extended ul li:hover {
+	background-color: var(--ta-surface-3);
+	color: var(--ta-text);
+}
+
+.dropdown-extended .header, .dropdown-extended .footer {
+	border-color: var(--ta-border);
+	color: var(--ta-text);
+}
+
+.dropdown-extended .footer {
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+.dropdown-extended .header {
+	background-color: var(--ta-surface-3);
+	background-image: none;
+	filter: none;
+}
+
+.dropdown .pointer {
+	border-color: var(--ta-border) transparent;
+}
+
+.dropdown .pointer-inner {
+	border-color: var(--ta-surface-2) transparent;
+}
+
+.dropdown-extended .pointer-inner {
+	border-color: var(--ta-surface-3) transparent;
+}
+
+.dropdown .dropdown-contents {
+	background: var(--ta-surface-2);
+	border-color: var(--ta-border);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.dropdown-up .dropdown-contents {
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.dropdown li, .dropdown li li {
+	border-color: var(--ta-border-soft);
+}
+
+.dropdown li.separator {
+	border-color: var(--ta-border-soft);
+}
+
+/* Notifications
+---------------------------------------- */
+
+.notification_list p.notification-time {
+	color: var(--ta-text-faint);
+}
+
+li.notification-reported strong, li.notification-disapproved strong {
+	color: var(--ta-danger);
+}
+
+.badge {
+	background-color: var(--ta-accent);
+	color: var(--ta-accent-ink);
+}
