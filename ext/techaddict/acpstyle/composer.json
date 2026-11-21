@@ -1,0 +1,25 @@
+{
+	"name": "techaddict/acpstyle",
+	"type": "phpbb-extension",
+	"description": "Dark Control Panel styling that matches the Carbon board theme.",
+	"homepage": "https://github.com/draand28/techaddict-theme",
+	"version": "1.0.0",
+	"license": "GPL-2.0-only",
+	"authors": [
+		{
+			"name": "TechAddict.Ro",
+			"homepage": "https://techaddict.ro",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.1.3",
+		"phpbb/phpbb": ">=3.3.0,<4.0.0@dev"
+	},
+	"extra": {
+		"display-name": "Carbon ACP",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.3.0,<4.0.0@dev"
+		}
+	}
+}
