@@ -19,11 +19,9 @@ styles/techaddict/
   template/overall_header.html  brand block, SVG favicon, theme-color
   template/navbar_header.html   adds the ta-topnav class
   template/*.html               unmodified prosilver 3.3.19 templates
-tools/
-  deploy.ps1                    upload, phpBB cache purge, Cloudflare purge
-  shots.mjs, lib.mjs            full-page screenshots of public pages
-  crops.mjs                     detail screenshots for review
-  loggedin.mjs                  screenshots of UCP / posting / memberlist
+ext/techaddict/acpstyle/        dark ACP extension (CSS injected after admin.css)
+tools/                          deploy, screenshots, and server cleanup scripts
+INCIDENT-2026-11-21.md          WordPress compromise cleanup record
 ```
 
 The child style ships the whole prosilver theme and template set on purpose:
@@ -53,6 +51,14 @@ self-contained directory is what makes a child style installable.
    switch immediately.
 4. Purge the board cache: ACP > General > Purge the cache, or
    `php -d memory_limit=-1 bin/phpbbcli.php cache:purge`.
+
+### Dark ACP
+
+`ext/techaddict/acpstyle` is a small phpBB extension. It injects
+`styles/all/theme/acp.css` after the admin stylesheet. Copy the extension into
+`ext/techaddict/acpstyle`, then enable it with
+`bin/phpbbcli.php extension:enable techaddict/acpstyle` and purge the cache.
+Disabling it returns the ACP to the stock light styling.
 
 The database rows created on techaddict.ro:
 
